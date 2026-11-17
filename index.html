@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cash Stamp — One Coin's Day Around the World | BCH BLAZE 2026 Media Track</title>
+<meta name="description" content="A 5-panel AI-assisted poster comic following one Bitcoin Cash coin around the world in a single day. Cash, unstopped. A BCH BLAZE 2026 Media Track entry.">
+<meta property="og:title" content="The Cash Stamp — Cash, Unstopped.">
+<meta property="og:description" content="One coin. One day. One planet. A 5-panel poster comic about Bitcoin Cash doing what cash does — everywhere.">
+<meta property="og:image" content="panel5.png">
+<style>
+  :root{
+    --green:#0AC18E;
+    --green-bright:#22e6ae;
+    --orange:#F59331;
+    --blaze:#FF6B1A;
+    --navy:#0A1628;
+    --navy2:#0E1F3A;
+    --cream:#FFF6E9;
+    --ink:#12233F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--navy);
+    color:var(--cream);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6;
+  }
+  /* ---------- top banner ---------- */
+  .topbar{
+    background:linear-gradient(90deg,var(--blaze),var(--orange));
+    color:#231303;
+    text-align:center;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.78rem;
+    padding:.55rem 1rem;
+  }
+  .topbar a{color:#231303;text-decoration:underline}
+  /* ---------- hero ---------- */
+  header{
+    text-align:center;
+    padding:4.5rem 1.5rem 3rem;
+    background:
+      radial-gradient(ellipse 60% 45% at 50% 0%,rgba(10,193,142,.28),transparent 70%),
+      linear-gradient(180deg,var(--navy2),var(--navy));
+  }
+  .kicker{
+    color:var(--green-bright);
+    font-weight:700;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+    font-size:.8rem;
+    margin-bottom:1rem;
+  }
+  h1{
+    font-size:clamp(2.6rem,8vw,5.2rem);
+    line-height:1.02;
+    font-weight:900;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+  }
+  h1 .stamp{
+    display:inline-block;
+    color:var(--navy);
+    background:var(--green);
+    padding:.02em .22em;
+    border-radius:.12em;
+    transform:rotate(-2deg);
+    box-shadow:.06em .06em 0 var(--blaze);
+  }
+  .slogan{
+    margin-top:1.4rem;
+    font-size:clamp(1.3rem,3.4vw,2rem);
+    font-weight:800;
+    color:var(--orange);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .lede{
+    max-width:44rem;
+    margin:1.4rem auto 0;
+    font-size:1.08rem;
+    color:#D9E6F5;
+  }
+  .lede strong{color:var(--green-bright)}
+  /* ---------- facts strip ---------- */
+  .facts{
+    display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;
+    max-width:70rem;margin:0 auto;padding:0 1.5rem 3.5rem;
+  }
+  .fact{
+    flex:1 1 13rem;
+    background:var(--navy2);
+    border:2px solid rgba(10,193,142,.45);
+    border-radius:1rem;
+    padding:1.1rem 1.2rem;
+    text-align:center;
+  }
+  .fact .big{font-size:1.5rem;font-weight:900;color:var(--green-bright)}
+  .fact .small{font-size:.9rem;color:#B9CCE4}
+  /* ---------- panels ---------- */
+  main{max-width:76rem;margin:0 auto;padding:0 1.5rem}
+  .panel{
+    display:grid;
+    grid-template-columns:minmax(0,5fr) minmax(0,4fr);
+    gap:2.2rem;
+    align-items:center;
+    margin-bottom:4.5rem;
+  }
+  .panel:nth-child(even){direction:rtl}
+  .panel:nth-child(even) .txt{direction:ltr}
+  .panel img{
+    width:100%;
+    display:block;
+    border-radius:1.2rem;
+    border:4px solid var(--green);
+    box-shadow:0 1.2rem 3rem rgba(0,0,0,.55),0 0 0 .55rem rgba(245,147,49,.25);
+  }
+  .panel .num{
+    font-size:.85rem;font-weight:800;letter-spacing:.3em;
+    color:var(--blaze);text-transform:uppercase;
+  }
+  .panel h2{
+    font-size:clamp(1.6rem,3.6vw,2.4rem);
+    font-weight:900;line-height:1.15;margin:.4rem 0 .8rem;
+    text-transform:uppercase;
+  }
+  .panel .time{
+    display:inline-block;
+    background:var(--green);color:var(--navy);
+    font-weight:800;border-radius:2rem;
+    padding:.15rem .8rem;font-size:.85rem;letter-spacing:.08em;
+    margin-bottom:.8rem;
+  }
+  .panel p{color:#D9E6F5;font-size:1.05rem;max-width:30rem}
+  /* ---------- finale ---------- */
+  .finale{text-align:center;margin:1rem auto 4rem;max-width:52rem}
+  .finale img{
+    width:100%;max-width:34rem;border-radius:1.2rem;
+    border:4px solid var(--orange);
+    box-shadow:0 1.2rem 3rem rgba(0,0,0,.55),0 0 4rem rgba(10,193,142,.35);
+  }
+  .finale .slogan{margin-top:1.8rem;font-size:clamp(1.8rem,5vw,3rem)}
+  .finale p{color:#D9E6F5;margin-top:.8rem}
+  /* ---------- statement ---------- */
+  .statement{
+    background:var(--navy2);
+    border-top:4px solid var(--green);
+    border-bottom:4px solid var(--blaze);
+    padding:3.5rem 1.5rem;
+  }
+  .statement .inner{max-width:46rem;margin:0 auto}
+  .statement h2{
+    font-size:1.7rem;font-weight:900;text-transform:uppercase;
+    letter-spacing:.04em;margin-bottom:1.2rem;color:var(--green-bright);
+  }
+  .statement p{margin-bottom:1.1rem;color:#E4EEF9}
+  .statement a{color:var(--orange)}
+  /* ---------- footer ---------- */
+  footer{
+    text-align:center;padding:2.6rem 1.5rem 3.2rem;color:#8FA8C4;font-size:.92rem;
+  }
+  footer .brand{font-weight:900;letter-spacing:.25em;color:var(--cream);text-transform:uppercase}
+  footer a{color:var(--green-bright)}
+  @media (max-width:760px){
+    .panel{grid-template-columns:1fr}
+    .panel:nth-child(even){direction:ltr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🔥 A <a href="https://dorahacks.io/hackathon/bchblaze2026/detail">BCH BLAZE 2026</a> · Media Track entry 🔥</div>
+
+<header>
+  <div class="kicker">A 5-panel poster comic</div>
+  <h1>The <span class="stamp">Cash Stamp</span></h1>
+  <div class="slogan">Cash, Unstopped.</div>
+  <p class="lede">Follow one glowing Bitcoin Cash coin on its rounds — <strong>Tokyo at dawn, Lagos by noon,
+  home to Manila by afternoon, a tip in Buenos Aires by dusk</strong>. No banks. No borders. No waiting.
+  Just cash, doing what cash was always meant to do: <strong>move</strong>.</p>
+</header>
+
+<div class="facts">
+  <div class="fact"><div class="big">&lt; 1¢</div><div class="small">typical fee per payment — a fraction of a cent</div></div>
+  <div class="fact"><div class="big">Seconds</div><div class="small">for a payment to land, anywhere on Earth</div></div>
+  <div class="fact"><div class="big">24 / 7 / 365</div><div class="small">no branches, no accounts, no opening hours</div></div>
+  <div class="fact"><div class="big">21M</div><div class="small">coins, ever. The stamp can't be printed away</div></div>
+</div>
+
+<main>
+  <section class="panel">
+    <img src="panel1.png" alt="Panel 1 — The coin pays for morning coffee at a Tokyo coffee stand under cherry blossoms">
+    <div class="txt">
+      <div class="num">Panel 01 · Tokyo, Japan</div>
+      <h2>First stop: coffee</h2>
+      <span class="time">07:00 — the day begins</span>
+      <p>The sun is barely up, the blossoms are out, and our coin is already at work. One tap at a
+      Tokyo coffee stand — paid in seconds. No card, no account, no &ldquo;processing&rdquo;. Cash doesn't
+      queue, and neither does the coffee.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="txt">
+      <div class="num">Panel 02 · Lagos, Nigeria</div>
+      <h2>Market day</h2>
+      <span class="time">12:30 — halfway round the world</span>
+      <p>By midday the same coin is in a Lagos market, swapping itself for bananas and oranges.
+      The fruit is fresh, the change is exact, and the fee is a fraction of a cent — small enough
+      that a market stall can actually keep what it earns.</p>
+    </div>
+    <img src="panel2.png" alt="Panel 2 — The coin buys fruit from a smiling vendor at a Lagos market stall">
+  </section>
+
+  <section class="panel">
+    <img src="panel3.png" alt="Panel 3 — The coin flies home to a happy family in Manila trailing green light">
+    <div class="txt">
+      <div class="num">Panel 03 · Manila, Philippines</div>
+      <h2>The money comes home</h2>
+      <span class="time">16:45 — same afternoon</span>
+      <p>Sent from the other side of the world, earned the hard way — and home before dinner.
+      Remittances are lifelines, and lifelines shouldn't take three business days or lose a tenth
+      of themselves on the way. Our coin lands at the front door, whole.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="txt">
+      <div class="num">Panel 04 · Buenos Aires, Argentina</div>
+      <h2>Tip the music</h2>
+      <span class="time">20:15 — dusk, La Boca</span>
+      <p>The tango is dancing, the guitarist is smiling, and a tip drops straight into the case —
+      no platform in the middle taking its cut first. When paying is effortless, generosity is too.
+      Art deserves instant applause.</p>
+    </div>
+    <img src="panel4.png" alt="Panel 4 — The coin tips a street guitarist in colorful La Boca, Buenos Aires, as tango dancers swirl behind">
+  </section>
+
+  <section class="finale">
+    <div class="num" style="font-size:.85rem;font-weight:800;letter-spacing:.3em;color:var(--blaze);text-transform:uppercase">Panel 05 · Everywhere</div>
+    <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:900;text-transform:uppercase;margin:.4rem 0 1.2rem">One coin. One day. One planet.</h2>
+    <img src="panel5.png" alt="Panel 5 — The coin rises heroically over a globe ringed with green light, world landmarks on the horizon">
+    <div class="slogan">Cash, Unstopped.</div>
+    <p>Four cities, four moments, one day — and the coin is already off to tomorrow.
+    That's the whole idea of Bitcoin Cash: peer-to-peer electronic cash for everyone, everywhere.</p>
+  </section>
+</main>
+
+<section class="statement">
+  <div class="inner">
+    <h2>Artist Statement</h2>
+    <p><strong>The Cash Stamp</strong> is a five-panel poster comic about the simplest, most radical
+    idea in crypto: money that just <em>works</em>, for ordinary people, in ordinary moments — a coffee,
+    a market stall, a family's remittance, a musician's tip.</p>
+    <p>Every stamp on a passport says <em>you were here</em>. Our coin collects a different kind of stamp:
+    proof that value moved — instantly, cheaply, and without asking anyone's permission — in Tokyo,
+    Lagos, Manila and Buenos Aires, all before the day was done.</p>
+    <p><strong>On the making:</strong> this series was created with AI image generation, directed,
+    curated and composed by a human artist — AI-assisted art is expressly welcomed in the BCH BLAZE
+    Media Track, and we're proud to say so openly. One consistent coin character was carried across
+    all five panels; captions, layout and this page were built by hand for the hackathon.</p>
+    <p><strong>Why it matters:</strong> most people will never read a whitepaper — but everyone
+    understands a day in the life of a coin. If this little traveller made you feel how cash without
+    borders could work, it did its job. Fees under a cent, payments in seconds, no account required:
+    that's Bitcoin Cash, and that's why the coin never stops.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">The Cash Stamp</div>
+  <p style="margin-top:.6rem">An entry to <a href="https://dorahacks.io/hackathon/bchblaze2026/detail">BCH BLAZE 2026</a> — Media Track ·
+  Say hello in the <a href="https://t.me/bchblaze">BCH BLAZE Telegram</a> · Follow <a href="https://x.com/bchblaze">@bchblaze</a></p>
+  <p style="margin-top:.4rem">Cash, unstopped. 🔥</p>
+</footer>
+
+</body>
+</html>
